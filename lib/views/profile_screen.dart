@@ -29,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   Center(
                       child: Column(
-                    children: [Text(user.name,style: titleTextStyle1,), Text(user.email,style: bodyTextStyle1,)],
+                    children: [Text(user.name,style: titleTextStyle1,overflow: TextOverflow.ellipsis,), Text(user.email,style: bodyTextStyle1,)],
                   )),
                   const SizedBox(
                     height: 25,
@@ -96,13 +96,16 @@ class ProfileScreen extends StatelessWidget {
                         subtitle: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Row(
-                              children: [
-                                Text(
-                                  "${user.address.city}, ${user.address.street}, ${user.address.suite}",
-                                  style: bodyTextStyle1,
-                                )
-                              ],
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                children: [
+                                  Text(
+                                    "${user.address.city}, ${user.address.street}, ${user.address.suite}",
+                                    style: bodyTextStyle1,
+                                  )
+                                ],
+                              ),
                             ),
                             Text(
                               "Zip: ${user.address.zipcode}",
