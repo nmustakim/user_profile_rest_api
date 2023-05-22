@@ -20,7 +20,12 @@ class ProfileScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  IconButton(onPressed: ()=>Navigator.pop(context), icon: const Icon(Icons.navigate_before,size: 35,)),
+                  IconButton(
+                      onPressed: () => Navigator.pop(context),
+                      icon: const Icon(
+                        Icons.navigate_before,
+                        size: 35,
+                      )),
                   const Center(
                     child: Icon(
                       Icons.person_outline_sharp,
@@ -29,7 +34,17 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   Center(
                       child: Column(
-                    children: [Text(user.name,style: titleTextStyle1,overflow: TextOverflow.ellipsis,), Text(user.email,style: bodyTextStyle1,)],
+                    children: [
+                      Text(
+                        user.name,
+                        style: titleTextStyle1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Text(
+                        user.email,
+                        style: bodyTextStyle1,
+                      )
+                    ],
                   )),
                   const SizedBox(
                     height: 25,
@@ -45,7 +60,7 @@ class ProfileScreen extends StatelessWidget {
                               ),
                               Text(
                                 "ID: ${user.id.toString()}",
-                             style: titleTextStyle2,
+                                style: titleTextStyle2,
                               )
                             ],
                           ),
@@ -111,9 +126,14 @@ class ProfileScreen extends StatelessWidget {
                               "Zip: ${user.address.zipcode}",
                               style: bodyTextStyle1,
                             ),
-                         Row(children: [
-                           Text("Lat: ${user.address.geo.lat}, Lon: ${user.address.geo.lng}",style: bodyTextStyle1,)
-                         ],)
+                            Row(
+                              children: [
+                                Text(
+                                  "Lat: ${user.address.geo.lat}, Lon: ${user.address.geo.lng}",
+                                  style: bodyTextStyle1,
+                                )
+                              ],
+                            )
                           ],
                         )),
                   ),

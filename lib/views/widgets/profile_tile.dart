@@ -21,15 +21,22 @@ class ProfileTile extends StatelessWidget {
         style: TextButton.styleFrom(
           padding: const EdgeInsets.all(15),
           shape:
-          RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
           backgroundColor: const Color(0xFFF5F6F9),
         ),
         onPressed: press,
         child: Row(
           children: [
             const SizedBox(width: 20),
-            Expanded(child: Text(text,style: bodyTextStyle1,)),
-            const Icon(Icons.arrow_forward_ios,color: Colors.black,),
+            Expanded(
+                child: Text(
+              text,
+              style: bodyTextStyle1,
+            )),
+            const Icon(
+              Icons.arrow_forward_ios,
+              color: Colors.black,
+            ),
           ],
         ),
       ),
