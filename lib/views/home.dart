@@ -80,6 +80,7 @@ TextEditingController searchController = TextEditingController();
                         onChanged: (v) => runFilter(v),
                         controller: searchController,
                         decoration: InputDecoration(
+                          hintText: "Search by name",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(24),
                           ),
